@@ -1,0 +1,9 @@
+---
+- hosts: raspberry 
+
+  gather_facts: no
+  tasks:
+
+#This copys a file from local to host specified
+  - name: copy test file
+    copy: src=/Users/leecase/test.txt dest=/home/lee/foo.conf owner=lee group=lee mode="u+rw,g-wx,o-rwx"
